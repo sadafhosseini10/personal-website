@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <title>Personal-web</title>
+    <style>
+      *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#181310;
+    color:#efe3d0;
+    font-family:'Poppins',sans-serif;
+}
+
+header{
+
+    width:100%;
+    padding:35px 80px;
+
+    display:flex;
+    justify-content:flex-end;
+}
+
+nav{
+
+    display:flex;
+    gap:55px;
+}
+
+nav a{
+
+    color:#d8c9b7;
+    text-decoration:none;
+    font-size:14px;
+    letter-spacing:3px;
+    margin-left: 15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+
+    color:rgb(145, 133, 103);
+}
+
+.hero{
+
+    width:100%;
+    min-height:85vh;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 80px 80px;
+}
+
+.hero-text{
+
+    width:48%;
+}
+
+.hero-text h1{
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:50px;
+    font-weight:100;
+    line-height:.98;
+    color:#9c8b6e;
+}
+
+.hero-text p{
+
+    margin-top:35px;
+
+    font-size:23px;
+    line-height:1.8;
+    color:#7c6e60;
+}
+
+.hero-image{
+
+    width:450px;
+    height:500px;
+
+    background:#0f0d0c;
+
+    overflow:hidden;
+}
+
+.hero-image img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    filter:brightness(.45);
+}
+
+@media(max-width:1000px){
+
+    header{
+
+       justify-content: center;
+       padding: 25px;
+    }
+
+    nav{
+         gap: 20px;
+         flex-wrap: wrap;
+         justify-content: center;
+
+       
+    }
+
+    nav a{
+
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    .hero{
+
+       flex-direction: column-reverse;
+       justify-content: center;
+       text-align: center;
+       padding: 40px 25px;
+       gap: 35px;
+       min-height: auto;
+    }
+
+    .hero-text{
+         width: 100%;
+        }
+
+    .hero-text h1{
+           font-size: 42px;
+           line-height: 1.2;
+    }
+    .hero-text p{
+        font-size: 18px;
+        line-height: 1.7;
+        margin-top: 20px;
+    }
+    .hero-image{
+        width: 100%;
+        max-width: 320px;
+        height: 380px;
+        margin: auto;
+    }
+    .tech{
+        padding: 60px 25px;
+    }
+    .tech h2{
+        font-size: 38px;
+        text-align: center;
+    }
+    .tech-container{
+        justify-content: center;
+    }
+    .card{
+        width: 140px;
+        height: 140px;
+        margin-right: 0;
+    }
+    .projects{padding: 60px 25px ;
+    }
+    .projects-container{
+        grid-template-columns: 1fr;
+    }
+    .projects-header{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+    .projects-header h2{
+        font-size: 38px;
+    }
+    .projects-card img{
+        height: 210px;
+     }
+     .contact{
+        margin: 60px 20px;
+        padding: 30px 20px;
+     }
+}
+@media(max-width:700px){
+
+    .hero{
+
+        flex-direction:column;
+        text-align:center;
+        gap:50px;
+    }
+
+    .hero-text{
+
+        width:100%;
+    }
+
+    .hero-text h1{
+
+        font-size:70px;
+    }
+
+    .hero-image{
+
+        width:100%;
+        max-width:500px;
+        height:600px;
+    }
+
+    header{
+
+        justify-content:center;
+        padding:30px;
+    }
+
+    nav{
+
+        gap:25px;
+        flex-wrap:wrap;
+    }
+
+}
+.tech{
+
+    padding:80px;
+    
+    background:#181310;
+}
+
+.tech h2{
+
+    color:#efe3d0;
+    font-family:'Cormorant Garamond',serif;
+    font-size:48px;
+    margin-bottom:35px;
+}
+
+.tech-container{
+
+    display:flex;
+    
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.card{
+
+    width:150px;
+    height:150px;
+    margin-right: 20px;
+    margin-top: 20px;
+    background:#211b17;
+    border:1px solid rgba(255,255,255,.05);
+    border-radius:18px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    transition:.3s;
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+    border-color:#b89d72;
+}
+
+.card i{
+
+    font-size:52px;
+    margin-bottom:18px;
+}
+
+.fa-python{
+
+    color:#FFD43B;
+}
+
+.fa-git-alt{
+
+    color:#F1502F;
+}
+
+.fa-github{
+
+    color:#ffffff;
+}
+
+.card span{
+
+    color:#ddd;
+    font-size:20px;
+    font-family:'Poppins',sans-serif;
+}
+.projects{
+
+    padding:80px;
+    background:#181310;
+}
+
+.projects-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.projects-header h2{
+
+    font-family:'Cormorant Garamond',serif;
+    color:#efe3d0;
+    font-size:48px;
+}
+
+.projects-header a{
+
+    color:#b89d72;
+    text-decoration:none;
+    font-size:16px;
+}
+
+.projects-container{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.project-card{
+
+    background:#211b17;
+    border:1px solid rgba(255,255,255,.05);
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.project-card:hover{
+
+    transform:translateY(-8px);
+    border-color:#b89d72;
+}
+
+.project-card img{
+
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.project-info{
+
+    padding:22px;
+}
+
+.title-row{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.title-row h3{
+
+    color:#fff;
+    font-size:24px;
+}
+
+.title-row a{
+
+    color:#d8c9b7;
+    text-decoration:none;
+    font-size:22px;
+}
+
+.project-info p{
+
+    color:#bfb4a8;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.tags{
+
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.tags span{
+
+    background:#2c2622;
+    color:#ddd;
+    padding:6px 14px;
+    border-radius:30px;
+    font-size:13px;
+}
+.contact{
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px;
+
+}
+.contact-btn{
+    text-decoration: none;
+    color: #474542;
+}
+.contact-btn:hover{
+    color: #b89d72;
+    transform: translateY(-3px);
+}
+
+@media(max-width:900px){
+
+    .projects{
+
+        padding:50px 25px;
+    }
+
+    .projects-container{
+
+        grid-template-columns:1fr;
+    }
+
+    .projects-header{
+
+        flex-direction:column;
+        gap:15px;
+        align-items:flex-start;
+    }
+
+    .projects-header h2{
+
+        font-size:40px;
+    }
+
+}
+    </style>
+</head>
+<body>
+
+<header>
+
+    <nav>
+        <a href="#hero">ABOUT</a>
+        <a href="#tech">SERVICES</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+</header>
+
+<section class="hero" id="hero">
+
+    <div class="hero-text">
+
+        <h1>
+            Hi, I'm Sadaf Hosseini <br>
+            A Beginner Web Developer
+        </h1>
+
+        <p>
+            Computer Engineering student and looking for an internship <br>
+             to gain hands-on experience , grow my skills and learn from experienced developer
+            
+        </p>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="girl.png" alt="profile">
+
+    </div>
+
+</section>
+<!-- Technologies -->
+
+<section class="tech" id="tech">
+
+    <h2>Technologies I work with</h2>
+
+    <div class="tech-container">
+
+        <div class="card">
+            <i class="fa-brands fa-python python"></i>
+            <span>Python</span>
+        </div>
+
+        <div class="card">
+            <i class="fa-brands fa-html5 html"></i>
+            <span>HTML</span>
+        </div>
+
+        <div class="card">
+            <i class="fa-brands fa-css3-alt css"></i>
+            <span>CSS</span>
+        </div>
+
+        <div class="card">
+            <i class="fa-brands fa-git-alt git"></i>
+            <span>Git</span>
+        </div>
+
+        <div class="card">
+            <i class="fa-brands fa-github github"></i>
+            <span>GitHub</span>
+        </div>
+
+        <!-- <div class="card">
+            <i class="devicon-microsoftsqlserver-plain colored"></i>
+            <span>SQL</span>
+        </div> -->
+    </div>
+
+</section>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<section class="projects">
+
+     <div class="projects-header">
+        <h2>Some of my recent work</h2> 
+
+       <!-- <a href="#">View all projects →</a>-->
+    </div>
+
+    <div class="projects-container">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+
+            <img src="cafe.png" alt="Project">
+
+            <div class="project-info">
+
+                <div class="title-row">
+                    <h3>cafe Website</h3>
+                      <a href="https://sadafweb0.github.io/Cafe-we/">↗</a>
+                </div>
+
+                <p>
+                    Turning idea into elegant and functional web experience.
+                </p>
+
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>GitHub</span>
+                </div>
+
+            </div>
+
+        </div>
+
+       <!-- Project 2 
+        <div class="project-card">
+
+            <img src="https://picsum.photos/500/280?random=2" alt="Project">
+
+            <div class="project-info">
+
+                <div class="title-row">
+                    <h3>Landing Page</h3>
+                    <a href="#">↗</a>
+                </div>
+
+                <p>
+                    Clean landing page with responsive layout and smooth animations.
+                </p>
+
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>GitHub</span>
+                </div>
+
+            </div>
+
+        </div> -->
+
+    </div>
+
+</section>
+
+<!-- Technologies -->
+<section class="contact" id="contact">
+    <h2>Get In Touch</h2>
+    <p>
+       If you are like to collaborate, feel free to get in touch.
+    </p>
+    <a href="mailto:sadafhosseini158@gmail.com" class="contact-btn">sadafhosseini158@gmail.com</a>
+</section>
+</body>
+</html>
